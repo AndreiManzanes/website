@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+    background-image: url(hh.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+
+}
+
+
+h1{
+    text-align:center;
+    color: orange;
+    margin: 0px;
+    padding: 0px;
+    font-size: 50px;
+
+}
+
+.navbar ul{
+    list-style-type: none;
+background-color: peachpuff;
+padding: 0px;
+margin: 0px;
+overflow: hidden;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    margin-top: 10px;
+
+}
+
+.navbar a:hover{
+    background-color: beige;
+}
+
+.navbar li{
+    float: right;
+}
+
+.navbar p{
+    float: left;
+    text-decoration: none;
+    margin-top: 5px;
+    padding-left: 20px;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    color: brown;
+}
+
+
+.bar ul{
+    list-style-type: none;
+background-color: lightcoral;
+padding: 10px;
+margin: 0px;
+overflow: hidden;
+
+}
+
+.bar a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0px;
+    display: block;
+    text-align: center;
+
+}
+
+.bar a:hover{
+    background-color: green;
+}
+
+.bar li{
+    float: left;
+}
+
+.ber{
+    background-color: peachpuff;
+    margin-top: 0px;
+    padding: 10px;
+}
+
+.navbir{
+    font-size: 115px;
+    text-align: left;
+    position: left;
+    margin: 225px;
+    padding: auto;
+}
+
+.navbir a{
+    color: green;
+
+}
+.navbir p{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 30%;
+        color: green;
+        position: center;
+}
+
+
+

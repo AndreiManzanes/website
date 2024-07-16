@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+</html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<title>TEA TEA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+<ul>
+<li><a href="aboutus.html">ABOUT</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="shop.html">PRODUCTS</a></li>
+<li><a href="home.html">HOME</a></li>
+<img src="laga.png" alt="Company Logo" width="80" height="60">
+</ul>
+</nav>
+</main>
+<body>
+<main>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+            padding: 0 20px;
+        }
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .product h2 {
+            margin-top: 0;
+        }
+        .product p {
+            color: #666;
+        }
+        .product button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        .product button:hover {
+            background-color: #0056b3;
+        }
+        .cart-form {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            position: left;
+            bottom: 20px;
+            left: 20px;
+        }
+        .cart-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .cart-form input[type="number"],
+        .cart-form input[type="submit"],
+        .cart-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .cart-form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .cart-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <div class="container">
+        <div class="product">
+            <img src="13.jpg" alt="Product 1">
+            <h2>Orange</h2>
+            <p>P50</p>
+            <label for="size_product1">Size:</label>
+            <select id="size_product1" name="size_product1">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </div>
+        <div class="product">
+            <img src="ni.jpg" alt="Product 2">
+            <h2>Lame</h2>
+            <p>P50</p>
+            <label for="size_product2">Size:</label>
+            <select id="size_product2" name="size_product2">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </div>
+        <div class="product">
+            <img src="na.jpg" alt="Product 3">
+            <h2>Starberry</h2>
+            <p>P50</p>
+            <label for="size_product3">Size:</label>
+            <select id="size_product3" name="size_product3">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </div>
+        <div class="product">
+            <img src="0a.webp" alt="Product 4">
+            <h2>Apple</h2>
+            <p>P50</p>
+            <label for="size_product4">Size:</label>
+            <select id="size_product4" name="size_product4">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </div>
+    </div>
+    <div class="cart-form">
+        <form action="#" method="post">
+            <fieldset style="border: 2px solid #007bff; padding: 10px; border-radius: 5px;">
+                <legend style="color: #007bff; font-weight: bold; font-size: 1.2em;">Add to Cart</legend>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                <label for="item">Item:</label>
+                <select id="item" name="item" required>
+                    <option value="Product 1">Orange - P50</option>
+                    <option value="Product 2">Lame - P50</option>
+                    <option value="Product 3">Strawberry - P50</option>
+                    <option value="Product 4">Apple - P50</option>
+                </select>
+
+                <input type="submit" value="Add to Cart">
+            </fieldset>
+        </form>
+    </div>
+
+</main>
+
+<script>
+    function addToCart(productName, productPrice) {
+        const quantity = document.getElementById('quantity').value;
+        const item = document.getElementById('item').value;
+        const size = document.getElementById(`size_${productName.replace(' ', '').toLowerCase()}`).value;
+        
+        // Here you can implement your cart logic (e.g., adding to a cart object or sending to a backend)
+        console.log(`Adding ${quantity} of ${size} ${item} to cart.`);
+        // Optionally, you can perform further actions like updating a cart total or displaying a confirmation message
+    }
+</script>
+
+</body>
+</html>
